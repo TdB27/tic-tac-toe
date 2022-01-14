@@ -1,0 +1,39 @@
+.main__card--default {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: $text;
+}
+
+.card-body-1,
+.card-body-2,
+.card-body-4,
+.card-body-5,
+.card-body-7,
+.card-body-8 {
+  border-right: 2px solid $title-marcacao;
+}
+
+.card-body-1,
+.card-body-2,
+.card-body-3,
+.card-body-4,
+.card-body-5,
+.card-body-6 {
+  border-bottom: 2px solid $title-marcacao;
+}
+
+.card-text {
+  max-width: 100%;
+  height: 100px;
+  margin: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-active {
+  background-color: $background-active;
+  color: $background-body;
+  border-radius: 6px;
+}

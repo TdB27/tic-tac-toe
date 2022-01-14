@@ -3,5 +3,8 @@
 @import 'fonts';
 
 #tic-tac-toe {
+  max-width: 420px;
+
   @import 'header';
+  @import 'main';
 }

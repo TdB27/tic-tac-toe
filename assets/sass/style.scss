@@ -1,2 +1,7 @@
+@import 'variables';
 @import 'global';
 @import 'fonts';
+
+#tic-tac-toe {
+  @import 'header';
+}

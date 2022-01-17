@@ -6,7 +6,7 @@ const game = function () {
   let player,
     winner = null
 
-  selectPlayer('O', '')
+  selectPlayer('X', '')
 
   function initGame() {
     card.forEach(item => {
@@ -19,20 +19,21 @@ const game = function () {
   function match(value) {
     if (value.innerHTML !== '' || winner !== null) return
 
-    if (player === 'O') {
-      player = 'X'
-    } else {
+    value.innerHTML = player
+
+    if (player === 'X') {
       player = 'O'
+    } else {
+      player = 'X'
     }
 
     selectPlayer(player, value)
     checkWin()
   }
 
-  function selectPlayer(value, print) {
+  function selectPlayer(value) {
     player = value
     turn.innerHTML = player
-    print.innerHTML = player
   }
 
   function checkWin() {
@@ -141,7 +142,7 @@ const game = function () {
 
   function reloadApp() {
     reload.addEventListener('click', () => {
-      player = 'O'
+      player = 'X'
       turn.innerHTML = player
       winner = null
       winnerMatch.innerHTML = ''

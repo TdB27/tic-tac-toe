@@ -42,3 +42,17 @@
   color: $background-body;
   border-radius: 6px;
 }
+
+.btn-outline-secondary {
+  border-color: $title-marcacao;
+  color: $title-marcacao;
+
+  &:hover {
+    background-color: $title-marcacao;
+    color: $background-body;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}

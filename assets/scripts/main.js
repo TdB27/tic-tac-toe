@@ -1,6 +1,7 @@
 const game = function () {
   let card = document.querySelectorAll('[data-card]')
-  let turn = document.getElementById('turno')
+  let reload = document.getElementById('reload')
+  let turn = document.getElementById('turn')
   const winnerMatch = document.getElementById('winner')
   let player,
     winner = null
@@ -138,8 +139,22 @@ const game = function () {
       winnerMatch.innerHTML = 'Draw'
   }
 
-  return { initGame }
+  function reloadApp() {
+    reload.addEventListener('click', () => {
+      player = 'O'
+      turn.innerHTML = player
+      winner = null
+      winnerMatch.innerHTML = ''
+      card.forEach(item => {
+        item.innerHTML = ''
+        item.classList.remove('card-active')
+      })
+    })
+  }
+
+  return { initGame, reloadApp }
 }
 
 const newGame = game()
 newGame.initGame()
+newGame.reloadApp()

@@ -1,0 +1,14 @@
+.footer__paragraph {
+  font-size: 12px;
+}
+
+.footer__img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
+}

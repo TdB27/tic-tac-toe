@@ -45,30 +45,37 @@ const game = function () {
     if (sequence(card1, card2, card3)) {
       activeWin(card1, card2, card3)
       changeWin(card1)
+      return
     }
     if (sequence(card4, card5, card6)) {
       activeWin(card4, card5, card6)
       changeWin(card4)
+      return
     }
     if (sequence(card7, card8, card9)) {
       activeWin(card7, card8, card9)
       changeWin(card7)
+      return
     }
     if (sequence(card1, card4, card7)) {
       activeWin(card1, card4, card7)
       changeWin(card1)
+      return
     }
     if (sequence(card2, card5, card8)) {
       activeWin(card2, card5, card8)
       changeWin(card2)
+      return
     }
     if (sequence(card3, card6, card9)) {
       activeWin(card3, card6, card9)
       changeWin(card3)
+      return
     }
     if (sequence(card1, card5, card9)) {
       activeWin(card1, card5, card9)
       changeWin(card1)
+      return
     }
     if (sequence(card3, card5, card7)) {
       activeWin(card3, card5, card7)

@@ -1,7 +1,9 @@
 const game = function () {
   let card = document.querySelectorAll('[data-card]')
+  let turn = document.getElementById('turno')
+  const winnerMatch = document.getElementById('winner')
   let player,
-    vencedor = null
+    winner = null
 
   selectPlayer('O', '')
 
@@ -14,7 +16,7 @@ const game = function () {
   }
 
   function match(value) {
-    if (value.innerHTML !== '' || vencedor !== null) return
+    if (value.innerHTML !== '' || winner !== null) return
 
     if (player === 'O') {
       player = 'X'
@@ -28,6 +30,7 @@ const game = function () {
 
   function selectPlayer(value, print) {
     player = value
+    turn.innerHTML = player
     print.innerHTML = player
   }
 
@@ -41,6 +44,17 @@ const game = function () {
     const card7 = document.getElementById('card7')
     const card8 = document.getElementById('card8')
     const card9 = document.getElementById('card9')
+    const check = {
+      card1,
+      card2,
+      card3,
+      card4,
+      card5,
+      card6,
+      card7,
+      card8,
+      card9
+    }
 
     if (sequence(card1, card2, card3)) {
       activeWin(card1, card2, card3)
@@ -80,6 +94,8 @@ const game = function () {
     if (sequence(card3, card5, card7)) {
       activeWin(card3, card5, card7)
       changeWin(card3)
+    } else {
+      draw(check)
     }
   }
 
@@ -97,13 +113,29 @@ const game = function () {
   }
 
   function changeWin(card) {
-    vencedor = card.innerHTML
+    winner = card.innerHTML
+    winnerMatch.innerHTML = winner
   }
 
   function activeWin(card1, card2, card3) {
     card1.classList.add('card-active')
     card2.classList.add('card-active')
     card3.classList.add('card-active')
+  }
+
+  function draw(check) {
+    if (
+      check.card1.innerHTML !== '' &&
+      check.card2.innerHTML !== '' &&
+      check.card3.innerHTML !== '' &&
+      check.card4.innerHTML !== '' &&
+      check.card5.innerHTML !== '' &&
+      check.card6.innerHTML !== '' &&
+      check.card7.innerHTML !== '' &&
+      check.card8.innerHTML !== '' &&
+      check.card9.innerHTML !== ''
+    )
+      winnerMatch.innerHTML = 'Draw'
   }
 
   return { initGame }

@@ -1,7 +1,7 @@
 # Tic-Tac-Toe
 The idea of this project is to develop the tic-tac-toe game (in portuguese: Jogo da velha) in multiplayer mode... the single mode is still being developed.
 <br>
-[click here](https://tdb27.github.io/tic-tac-toe/) to access the game
+[Click here](https://tdb27.github.io/tic-tac-toe/) to access the game
 <br>
 ## How to play
 - The first player starts with 'X' and second with 'O'

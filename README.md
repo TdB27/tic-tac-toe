@@ -11,5 +11,5 @@ The idea of this project is to develop the tic-tac-toe game (in portuguese: Jogo
 
 <p align="center">
   <br />
-  <img src="" width="50%" alt="Screenshot to desktop">
+  <img src="https://github.com/TdB27/tic-tac-toe/blob/main/assets/screenshots/Tic-Tac-Toe-Game.png" width="70%" alt="Screenshot to desktop">
 </p>

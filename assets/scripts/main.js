@@ -156,6 +156,13 @@ const game = function () {
   return { initGame, reloadApp }
 }
 
+const footer = function () {
+const date = document.querySelector('footer p')
+const year = new Date()
+date.innerHTML = `© ${year.getFullYear()} Thiago Billy`
+}
+
 const newGame = game()
 newGame.initGame()
 newGame.reloadApp()
+footer()
